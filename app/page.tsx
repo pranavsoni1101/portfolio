@@ -4,6 +4,7 @@ import React from "react";
 import { FloatingDockNav } from "./floatingDock";
 import { Hero } from "./hero";
 import { Experience } from "./experience";
+import { Contact } from "./contact";
 
 const Home = () => {
   return (
@@ -14,9 +15,9 @@ const Home = () => {
       <section id="experience">
         <Experience />
       </section>
-      {/* <section>
-
-      </section> */}
+      <section id="contact">
+        <Contact />
+      </section>
       <FloatingDockNav />
     </>
   );
