@@ -2,11 +2,12 @@
 
 import React from 'react';
 import { FloatingDockNav } from './floatingDock';
+import { Hero } from './hero';
 
 const Home = () => {
   return(
     <>
-      <h1>Hello World</h1>
+      <Hero />
       <FloatingDockNav />
     </>
   )

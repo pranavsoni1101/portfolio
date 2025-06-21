@@ -40,9 +40,9 @@ export function FloatingDockNav() {
     },
   ];
   return (
-    <div className="flex items-center justify-center h-[35rem] w-full">
+    <div className="fixed inset-x-0 bottom-8 z-50 flex justify-center">
       <FloatingDock
-        mobileClassName="translate-y-20" // only for demo, remove for production
+        mobileClassName="left-0" // only for demo, remove for production
         items={links}
       />
     </div>
