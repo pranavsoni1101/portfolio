@@ -7,7 +7,7 @@ import {
   IconBriefcase,
 } from "@tabler/icons-react";
 
-export function FloatingDockDemo() {
+export function FloatingDockNav() {
   const links = [
     {
       title: "About",

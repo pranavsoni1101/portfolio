@@ -1,13 +1,13 @@
 "use client"
 
 import React from 'react';
-import { FloatingDockDemo } from './floatingDock';
+import { FloatingDockNav } from './floatingDock';
 
 const Home = () => {
   return(
     <>
       <h1>Hello World</h1>
-      <FloatingDockDemo />
+      <FloatingDockNav />
     </>
   )
 }
