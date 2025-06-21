@@ -5,6 +5,7 @@ import { FloatingDockNav } from "./floatingDock";
 import { Hero } from "./hero";
 import { Experience } from "./experience";
 import { Contact } from "./contact";
+import Skills from "./skills";
 
 const Home = () => {
   return (
@@ -14,6 +15,9 @@ const Home = () => {
       </section>
       <section id="experience">
         <Experience />
+      </section>
+      <section id="skills">
+        <Skills />
       </section>
       <section id="contact">
         <Contact />

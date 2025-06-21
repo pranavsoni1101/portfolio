@@ -36,7 +36,7 @@ export function FloatingDockNav() {
       icon: (
         <IconBrain className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#skills",
     },
   ];
   return (
