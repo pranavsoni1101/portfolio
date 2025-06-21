@@ -14,7 +14,7 @@ export function FloatingDockNav() {
       icon: (
         <IconAddressBook className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#about",
     },
 
     {
@@ -22,7 +22,7 @@ export function FloatingDockNav() {
       icon: (
         <IconBuildingSkyscraper className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "#",
+      href: "#experience",
     },
     {
       title: "Projects",
