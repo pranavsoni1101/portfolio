@@ -6,6 +6,7 @@ import { Hero } from "./hero";
 import { Experience } from "./experience";
 import { Contact } from "./contact";
 import Skills from "./skills";
+import { Projects } from "./projects";
 
 const Home = () => {
   return (
@@ -15,6 +16,9 @@ const Home = () => {
       </section>
       <section id="experience">
         <Experience />
+      </section>
+      <section id= "projects">
+        <Projects />
       </section>
       <section id="skills">
         <Skills />
