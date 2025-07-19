@@ -16,7 +16,7 @@ export const FloatingDock = ({
   desktopClassName,
   mobileClassName,
 }: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
+  items: { title: string; icon: React.ReactNode; href: string , onClick: () => void}[];
   desktopClassName?: string;
   mobileClassName?: string;
 }) => {
@@ -32,7 +32,7 @@ const FloatingDockMobile = ({
   items,
   className,
 }: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
+  items: { title: string; icon: React.ReactNode; href: string,  onClick: () => void }[];
   className?: string;
 }) => {
   const [open, setOpen] = useState(false);
@@ -61,13 +61,17 @@ const FloatingDockMobile = ({
                 }}
                 transition={{ delay: (items.length - 1 - idx) * 0.05 }}
               >
-                <a
-                  href={item.href}
-                  key={item.title}
+                <button
+                  onClick={() => {
+                    item.onClick(); // Execute the passed onClick handler
+                    setOpen(false); // Close the mobile menu after clicking an item
+                  }}
+                  key={item.title} // This key is fine here, but consider moving to the motion.div if it's already there
                   className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-900"
+                  type="button" // Important for buttons not in a form
                 >
                   <div className="h-4 w-4">{item.icon}</div>
-                </a>
+                </button>
               </motion.div>
             ))}
           </motion.div>
@@ -87,7 +91,7 @@ const FloatingDockDesktop = ({
   items,
   className,
 }: {
-  items: { title: string; icon: React.ReactNode; href: string }[];
+  items: { title: string; icon: React.ReactNode; href: string, onClick: () => void }[];
   className?: string;
 }) => {
   let mouseX = useMotionValue(Infinity);
@@ -112,11 +116,13 @@ function IconContainer({
   title,
   icon,
   href,
+  onClick
 }: {
   mouseX: MotionValue;
   title: string;
   icon: React.ReactNode;
   href: string;
+  onClick: () => void;
 }) {
   let ref = useRef<HTMLDivElement>(null);
 
@@ -161,7 +167,7 @@ function IconContainer({
   const [hovered, setHovered] = useState(false);
 
   return (
-    <a href={href}>
+    <button onClick={onClick} type="button">
       <motion.div
         ref={ref}
         style={{ width, height }}
@@ -188,6 +194,6 @@ function IconContainer({
           {icon}
         </motion.div>
       </motion.div>
-    </a>
+    </button>
   );
 }

@@ -34,6 +34,6 @@ export const projects = [
     title: "E-commerce Platform",
     description:
       "A multinational technology company that specializes in Internet-related services and products.",
-    link: "#",
+    link: "#oops",
   },
 ];
